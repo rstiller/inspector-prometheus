@@ -27,34 +27,48 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content overview">
+               <div class="content getting-started">
                    <div class="content-data">
 
+<h1 id="changelog">Changelog</h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
+and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h2 id="-unreleased-">[Unreleased]</h2>
+<h2 id="-2-0-0-2018-11-04">[2.0.0] - 2018-11-04</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>CHANGELOG</li>
+<li>compile and test script for different node versions</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>added nodejs 11 to travis.yml</li>
+<li>updated dependencies</li>
+<li>use <a href="mailto:inspector-metrics@1.13.0">inspector-metrics@1.13.0</a></li>
+<li>adapted new MetricLogger implementation</li>
+</ul>
+<h2 id="-1-0-0-2018-10-04">[1.0.0] - 2018-10-04</h2>
+<p>Initial release.</p>
+<h3 id="added">Added</h3>
+<ul>
+<li>project setup<ul>
+<li>README</li>
+<li>typescript config</li>
+<li>lint config</li>
+</ul>
+</li>
+<li>licensed under MIT license</li>
+<li>basic prometheus / pushgateway reporter</li>
+<li>mocha testing (with chai, sinon)</li>
+<li>NYC code-coverage config</li>
+<li>added editorconfig file</li>
+<li>travis.yml for nodejs 6, 7, 8, 9, 10</li>
+<li>basic playground setup</li>
+<li>use <a href="mailto:inspector-metrics@1.11.0">inspector-metrics@1.11.0</a></li>
+</ul>
 
-<ol class="breadcrumb">
-    <li>Overview</li>
-</ol>
 
-<div class="container-fluid overview">
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="card text-center">
-                <div class="card-block">
-                    <h4 class="card-title"><span class="icon ion-ios-paper"></span></h4>
-                    <p class="card-text">3 Classes</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card text-center">
-                <div class="card-block">
-                    <h4 class="card-title"><span class="icon ion-md-information-circle-outline"></span></h4>
-                    <p class="card-text">4 Interfaces</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 
@@ -87,8 +101,8 @@
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 0;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'overview';
-            var COMPODOC_CURRENT_PAGE_URL = 'overview.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'changelog.html';
        </script>
 
        <script src="./js/libs/custom-elements.min.js"></script>

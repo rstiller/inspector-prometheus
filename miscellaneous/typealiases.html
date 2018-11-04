@@ -18,10 +18,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -60,7 +57,7 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#MetricType" title="lib/metrics/PrometheusMetricReporter.ts"><b>MetricType</b>&nbsp;&nbsp;&nbsp;(lib/.../PrometheusMetricReporter.ts)</a>
+                            <a href="#PrometheusMetricType" title="lib/metrics/PrometheusMetricReporter.ts"><b>PrometheusMetricType</b>&nbsp;&nbsp;&nbsp;(lib/.../PrometheusMetricReporter.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -75,8 +72,8 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="MetricType"></a>
-                        <span class="name"><b>MetricType</b><a href="#MetricType"><span class="icon ion-ios-link"></span></a></span>
+                        <a name="PrometheusMetricType"></a>
+                        <span class="name"><b>PrometheusMetricType</b><a href="#PrometheusMetricType"><span class="icon ion-ios-link"></span></a></span>
                     </td>
                 </tr>
                     <tr>
@@ -87,7 +84,7 @@
                     </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>MetricType:     <code>&quot;counter&quot; | &quot;gauge&quot; | &quot;histogram&quot; | &quot;summary&quot; | &quot;untyped&quot;</code>
+                        <code>PrometheusMetricType:     <code>&quot;counter&quot; | &quot;gauge&quot; | &quot;histogram&quot; | &quot;summary&quot; | &quot;untyped&quot;</code>
 </code>
                     </td>
                 </tr>
@@ -119,7 +116,9 @@
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <script src="../js/menu-wc.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

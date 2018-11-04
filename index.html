@@ -18,10 +18,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -70,7 +67,7 @@ import {
 // contains all metrics
 const registry = new MetricRegistry();
 // exposes the metrics
-const reporter = new PrometheusMetricReporter();
+const reporter = new PrometheusMetricReporter({});
 
 // register the registry within the reporter
 reporter.addMetricRegistry(registry);
@@ -127,41 +124,47 @@ requests_count{app_version=&quot;1.0.0&quot;,host=&quot;127.0.0.3&quot;} 362
 requests_sum{app_version=&quot;1.0.0&quot;,host=&quot;127.0.0.3&quot;} 283998208</code></pre></div><h2 id="reporting-options-for-prometheusmetricreporter">reporting options for PrometheusMetricReporter</h2>
 <div><pre class="line-numbers"><code class="language-typescript">import {
     PrometheusMetricReporter,
-    PrometheusReporterOptions,
 } from &quot;inspector-prometheus&quot;;
 
-const reporter = new PrometheusMetricReporter(new PrometheusReporterOptions(
-    true, // includeTimestamp - default is false
-    true, // emitComments - default is true
-    false, // useUntyped - default is false
-));</code></pre></div><h2 id="report-metrics-with-pushgateway">report metrics with pushgateway</h2>
+const reporter = new PrometheusMetricReporter({
+    includeTimestamp: true,
+    emitComments: true,
+    useUntyped: false,
+});</code></pre></div><h2 id="report-metrics-with-pushgateway">report metrics with pushgateway</h2>
 <div><pre class="line-numbers"><code class="language-typescript">import ...; // like in the example above
 
 import {
     PrometheusMetricReporter,
     PushgatewayMetricReporter,
-    PushgatewayReporterOptions,
 } from &quot;inspector-prometheus&quot;;
 
 // contains all metrics
 const registry = new MetricRegistry();
 // exposes the metrics
-const reporter = new PrometheusMetricReporter();
+const reporter = new PrometheusMetricReporter({});
 
 // register the registry within the reporter
 reporter.addMetricRegistry(registry);
 
-const pushReporter = new PushgatewayMetricReporter(
+const pushReporter = new PushgatewayMetricReporter({
     reporter,
-    new PushgatewayReporterOptions(
-        &quot;localhost&quot;, // assuming the pushgateway is running on localhost
-        9091, // standard port for pushgateway
-        &quot;pushgateway&quot;, // id of the job
-        &quot;127.0.0.4&quot;, // id of the instance
-    ));
+
+    host: &quot;localhost&quot;,
+    port: 9091,
+    job: &quot;pushgateway&quot;,
+    instance: &quot;127.0.0.4&quot;,
+});
 
 // start reporting
-pushReporter.start();</code></pre></div><h2 id="license">License</h2>
+pushReporter.start();</code></pre></div><h2 id="local-dev">local dev</h2>
+<h3 id="compile-test-with-different-nodejs-versions">compile &amp; test with different nodejs versions</h3>
+<p>build docker images:  </p>
+<div><pre class="line-numbers"><code class="language-bash">docker-compose build</code></pre></div><p>run tests:  </p>
+<div><pre class="line-numbers"><code class="language-bash">docker-compose run node6
+docker-compose run node7
+docker-compose run node8
+docker-compose run node9
+docker-compose run node10</code></pre></div><h2 id="license">License</h2>
 <p><a href="https://www.opensource.org/licenses/mit-license.php">MIT</a></p>
 
 
@@ -203,7 +206,9 @@ pushReporter.start();</code></pre></div><h2 id="license">License</h2>
 
        <script src="./js/libs/custom-elements.min.js"></script>
        <script src="./js/libs/lit-html.js"></script>
-       <script src="./js/menu-wc.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
 
        <script src="./js/libs/bootstrap-native.js"></script>
 

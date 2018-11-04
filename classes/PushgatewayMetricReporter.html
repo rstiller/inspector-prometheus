@@ -18,10 +18,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -80,7 +77,7 @@ to the configurated pushgateway using the text format.</p>
                 <h3>Extends</h3>
             </p>
             <p class="comment">
-                    <code>MetricReporter</code>
+                    <code>ScheduledMetricReporter</code>
             </p>
 
 
@@ -94,45 +91,6 @@ to the configurated pushgateway using the text format.</p>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#interval">interval</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#logger">logger</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#options">options</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#reporter">reporter</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#scheduler">scheduler</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#timer">timer</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#unit">unit</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -143,16 +101,34 @@ to the configurated pushgateway using the text format.</p>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Protected</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#handleResults">handleResults</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                    <span class="modifier">Async</span>
                                 <a href="#report">report</a>
                             </li>
                             <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#start">start</a>
+                                    <span class="modifier">Protected</span>
+                                <a href="#reportCounter">reportCounter</a>
                             </li>
                             <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#stop">stop</a>
+                                    <span class="modifier">Protected</span>
+                                <a href="#reportGauge">reportGauge</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#reportHistogram">reportHistogram</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#reportMeter">reportMeter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#reportTimer">reportTimer</a>
                             </li>
                         </ul>
                     </td>
@@ -173,12 +149,12 @@ to the configurated pushgateway using the text format.</p>
                 <tr>
                     <td class="col-md-4">
                                 <span class="modifier">Public</span>
-                        <code>constructor(reporter: <a href="../classes/PrometheusMetricReporter.html">PrometheusMetricReporter</a>, options: <a href="../classes/PushgatewayReporterOptions.html">PushgatewayReporterOptions</a>, interval: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, unit: TimeUnit, logger: Logger, scheduler: Scheduler)</code>
+                        <code>constructor(undefined: <a href="../interfaces/PushgatewayReporterOptions.html">PushgatewayReporterOptions</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:110</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:85</a></div>
                             </td>
                         </tr>
 
@@ -198,70 +174,9 @@ to the configurated pushgateway using the text format.</p>
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>reporter</td>
                                                   
                                                         <td>
-                                                                    <code><a href="../classes/PrometheusMetricReporter.html" target="_self" >PrometheusMetricReporter</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>options</td>
-                                                  
-                                                        <td>
-                                                                    <code><a href="../classes/PushgatewayReporterOptions.html" target="_self" >PushgatewayReporterOptions</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>interval</td>
-                                                  
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>unit</td>
-                                                  
-                                                        <td>
-                                                                    <code>TimeUnit</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>logger</td>
-                                                  
-                                                        <td>
-                                                                    <code>Logger</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>scheduler</td>
-                                                  
-                                                        <td>
-                                                                    <code>Scheduler</code>
+                                                                    <code><a href="../interfaces/PushgatewayReporterOptions.html" target="_self" >PushgatewayReporterOptions</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -278,301 +193,6 @@ to the configurated pushgateway using the text format.</p>
         </table>
 </section>
 
-            <section>
-    
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="interval"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            interval
-                            </b>
-                            <a href="#interval"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>interval:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:77</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>The interval in <a href="../classes/PushgatewayMetricReporter.html#unit">PushgatewayMetricReporter</a> in which this reporter send data
-to the pushgateway.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="logger"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            logger
-                            </b>
-                            <a href="#logger"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>logger:     <code>Logger</code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>Logger</code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="102" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:102</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>A simplified logger interface to log response code and message of the pushgateway.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="options"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            options
-                            </b>
-                            <a href="#options"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>options:     <code><a href="../classes/PushgatewayReporterOptions.html" target="_self" >PushgatewayReporterOptions</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../classes/PushgatewayReporterOptions.html" target="_self" >PushgatewayReporterOptions</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:68</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>The configuration object.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="reporter"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            reporter
-                            </b>
-                            <a href="#reporter"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>reporter:     <code><a href="../classes/PrometheusMetricReporter.html" target="_self" >PrometheusMetricReporter</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../classes/PrometheusMetricReporter.html" target="_self" >PrometheusMetricReporter</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:60</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>The reporter use ot generate the metrics string.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="scheduler"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            scheduler
-                            </b>
-                            <a href="#scheduler"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>scheduler:     <code>Scheduler</code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>Scheduler</code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:110</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>The scheduler function used to schedule the reporting wit the given interval.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="timer"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            timer
-                            </b>
-                            <a href="#timer"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>timer:     <code>NodeJS.Timer</code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>NodeJS.Timer</code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:94</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>A reference to the NodeJS Timer object created by the scheduler
-function - most likely the {@code setInterval()} function.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="unit"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            unit
-                            </b>
-                            <a href="#unit"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>unit:     <code>TimeUnit</code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>TimeUnit</code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:85</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>The time unit the reporting interval is interpreted with.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-</section>
 
             <section>
     
@@ -583,10 +203,133 @@ function - most likely the {@code setInterval()} function.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="handleResults"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                                <span class="modifier">Async</span>
+                            handleResults
+                            </b>
+                            <a href="#handleResults"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>handleResults(ctx: OverallReportContext, registry: MetricRegistry, date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>, type: MetricType, results: Array<ReportingResult<any, any>>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="161" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:161</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Not implemented.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>ctx</td>
+                                                        <td>
+                                                                    <code>OverallReportContext</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>registry</td>
+                                                        <td>
+                                                                    <code>MetricRegistry</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>date</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>type</td>
+                                                        <td>
+                                                                    <code>MetricType</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>results</td>
+                                                        <td>
+                                                                    <code>Array&lt;ReportingResult&lt;any, any&gt;&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="report"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Private</span>
+                                <span class="modifier">Protected</span>
+                                <span class="modifier">Async</span>
                             report
                             </b>
                             <a href="#report"><span class="icon ion-ios-link"></span></a>
@@ -603,21 +346,101 @@ function - most likely the {@code setInterval()} function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="170" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:170</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:129</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Calls the reporter t generate the metrics in a valid prometheus text format.
+                            <div class="io-description"><p>Calls the <a href="../classes/PrometheusMetricReporter.html">PrometheusMetricReporter</a> to generate the metrics in a valid prometheus text format.
 Sends the metrics via &#39;PUT&#39; to the configured pushgateway.</p>
 </div>
 
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;OverallReportContext&gt;</code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reportCounter"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            reportCounter
+                            </b>
+                            <a href="#reportCounter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>reportCounter(counter: MonotoneCounter | Counter, ctx: MetricSetReportContext<MonotoneCounter | Counter>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="175" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:175</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Not implemented.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>counter</td>
+                                                        <td>
+                                                                    <code>MonotoneCounter | Counter</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>ctx</td>
+                                                        <td>
+                                                                    <code>MetricSetReportContext&lt;MonotoneCounter | Counter&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
                             <div>
                             </div>
                             <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                             </div>
                                 <div class="io-description">
@@ -631,41 +454,83 @@ Sends the metrics via &#39;PUT&#39; to the configured pushgateway.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="start"></a>
+                        <a name="reportGauge"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Public</span>
-                            start
+                                <span class="modifier">Protected</span>
+                            reportGauge
                             </b>
-                            <a href="#start"><span class="icon ion-ios-link"></span></a>
+                            <a href="#reportGauge"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
                             <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>start()</code>
+                        <code>reportGauge(gauge: Gauge<any>, ctx: MetricSetReportContext<Gauge<any>>)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:146</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="186" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:186</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Uses the scheduler function to call the <a href="../classes/PushgatewayMetricReporter.html#report">PushgatewayMetricReporter</a> function
-in the interval specified. The interval is converted into <a href="MILLISECOND">MILLISECOND</a>s.</p>
+                            <div class="io-description"><p>Not implemented.</p>
 </div>
 
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>gauge</td>
+                                                        <td>
+                                                                    <code>Gauge&lt;any&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>ctx</td>
+                                                        <td>
+                                                                    <code>MetricSetReportContext&lt;Gauge&lt;any&gt;&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                             </div>
+                                <div class="io-description">
+                                    
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -674,40 +539,253 @@ in the interval specified. The interval is converted into <a href="MILLISECOND">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="stop"></a>
+                        <a name="reportHistogram"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Public</span>
-                            stop
+                                <span class="modifier">Protected</span>
+                            reportHistogram
                             </b>
-                            <a href="#stop"><span class="icon ion-ios-link"></span></a>
+                            <a href="#reportHistogram"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
                             <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>stop()</code>
+                        <code>reportHistogram(histogram: Histogram, ctx: MetricSetReportContext<Histogram>)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="156" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:156</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:195</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Stops the scheduled reporting.</p>
+                            <div class="io-description"><p>Not implemented.</p>
 </div>
 
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>histogram</td>
+                                                        <td>
+                                                                    <code>Histogram</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>ctx</td>
+                                                        <td>
+                                                                    <code>MetricSetReportContext&lt;Histogram&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                             </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reportMeter"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            reportMeter
+                            </b>
+                            <a href="#reportMeter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>reportMeter(meter: Meter, ctx: MetricSetReportContext<Meter>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="204" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:204</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Not implemented.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>meter</td>
+                                                        <td>
+                                                                    <code>Meter</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>ctx</td>
+                                                        <td>
+                                                                    <code>MetricSetReportContext&lt;Meter&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reportTimer"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            reportTimer
+                            </b>
+                            <a href="#reportTimer"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>reportTimer(timer: Timer, ctx: MetricSetReportContext<Timer>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:213</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Not implemented.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>timer</td>
+                                                        <td>
+                                                                    <code>Timer</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>ctx</td>
+                                                        <td>
+                                                                    <code>MetricSetReportContext&lt;Timer&gt;</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -727,12 +805,22 @@ in the interval specified. The interval is converted into <a href="MILLISECOND">
 
 import * as http from &quot;http&quot;;
 import {
+    Counter,
+    Gauge,
+    Histogram,
     Logger,
-    MetricReporter,
+    Meter,
+    MetricRegistry,
+    MetricSetReportContext,
+    MetricType,
     MILLISECOND,
-    Scheduler,
-    SECOND,
-    TimeUnit,
+    MonotoneCounter,
+    OverallReportContext,
+    ReportingResult,
+    ScheduledMetricReporter,
+    ScheduledMetricReporterOptions,
+    StdClock,
+    Timer,
 } from &quot;inspector-metrics&quot;;
 import { PrometheusMetricReporter } from &quot;./PrometheusMetricReporter&quot;;
 
@@ -740,27 +828,51 @@ import { PrometheusMetricReporter } from &quot;./PrometheusMetricReporter&quot;;
  * Configuration object for {@link PushgatewayMetricReporter}.
  *
  * @export
- * @class PushgatewayReporterOptions
+ * @interface PushgatewayReporterOptions
  */
-export class PushgatewayReporterOptions {
-
+export interface PushgatewayReporterOptions extends ScheduledMetricReporterOptions {
     /**
-     * Creates an instance of PushgatewayReporterOptions.
+     * The hostname or ip address of the pushgateway
      *
-     * @param {string} [host&#x3D;&quot;&quot;] the hostname or ip address of the pushgateway
-     * @param {number} [port&#x3D;9091] the port of the pushgateway
-     * @param {string} [job&#x3D;&quot;&quot;] the id of the job
-     * @param {string} [instance&#x3D;&quot;&quot;] the id of this instance
+     * @type {string}
      * @memberof PushgatewayReporterOptions
      */
-    constructor(
-        public readonly host: string &#x3D; &quot;&quot;,
-        public readonly port: number &#x3D; 9091,
-        public readonly job: string &#x3D; &quot;&quot;,
-        public readonly instance: string &#x3D; &quot;&quot;,
-    ) {
-    }
-
+    readonly host?: string;
+    /**
+     * The port of the pushgateway.
+     *
+     * @type {number}
+     * @memberof PushgatewayReporterOptions
+     */
+    readonly port?: number;
+    /**
+     * The id of the job.
+     *
+     * @type {string}
+     * @memberof PushgatewayReporterOptions
+     */
+    readonly job?: string;
+    /**
+     * The id of this instance.
+     *
+     * @type {string}
+     * @memberof PushgatewayReporterOptions
+     */
+    readonly instance?: string;
+    /**
+     * The reporter use ot generate the metrics string.
+     *
+     * @type {PrometheusMetricReporter}
+     * @memberof PushgatewayReporterOptions
+     */
+    readonly reporter?: PrometheusMetricReporter;
+    /**
+     * A simplified logger interface to log response code and message of the pushgateway.
+     *
+     * @type {Logger}
+     * @memberof PushgatewayReporterOptions
+     */
+    log?: Logger;
 }
 
 /**
@@ -773,127 +885,53 @@ export class PushgatewayReporterOptions {
  * @class PushgatewayMetricReporter
  * @extends {MetricReporter}
  */
-export class PushgatewayMetricReporter extends MetricReporter {
-
-    /**
-     * The reporter use ot generate the metrics string.
-     *
-     * @private
-     * @type {PrometheusMetricReporter}
-     * @memberof PushgatewayMetricReporter
-     */
-    private reporter: PrometheusMetricReporter;
-    /**
-     * The configuration object.
-     *
-     * @private
-     * @type {PushgatewayReporterOptions}
-     * @memberof PushgatewayMetricReporter
-     */
-    private options: PushgatewayReporterOptions;
-    /**
-     * The interval in {@link PushgatewayMetricReporter#unit} in which this reporter send data
-     * to the pushgateway.
-     *
-     * @private
-     * @type {number}
-     * @memberof PushgatewayMetricReporter
-     */
-    private interval: number;
-    /**
-     * The time unit the reporting interval is interpreted with.
-     *
-     * @private
-     * @type {TimeUnit}
-     * @memberof PushgatewayMetricReporter
-     */
-    private unit: TimeUnit;
-    /**
-     * A reference to the NodeJS Timer object created by the scheduler
-     * function - most likely the {@code setInterval()} function.
-     *
-     * @private
-     * @type {NodeJS.Timer}
-     * @memberof PushgatewayMetricReporter
-     */
-    private timer: NodeJS.Timer;
-    /**
-     * A simplified logger interface to log response code and message of the pushgateway.
-     *
-     * @private
-     * @type {Logger}
-     * @memberof PushgatewayMetricReporter
-     */
-    private logger: Logger;
-    /**
-     * The scheduler function used to schedule the reporting wit the given interval.
-     *
-     * @private
-     * @type {Scheduler}
-     * @memberof PushgatewayMetricReporter
-     */
-    private scheduler: Scheduler;
+export class PushgatewayMetricReporter extends ScheduledMetricReporter&lt;PushgatewayReporterOptions, any&gt; {
 
     /**
      * Creates an instance of PushgatewayMetricReporter.
      *
-     * @param {PrometheusMetricReporter} reporter
-     * @param {PushgatewayReporterOptions} options
-     * @param {number} [interval&#x3D;15]
-     * @param {TimeUnit} [unit&#x3D;SECOND]
-     * @param {Logger} [logger&#x3D;null]
-     * @param {Scheduler} [scheduler&#x3D;setInterval]
      * @memberof PushgatewayMetricReporter
      */
-    public constructor(
-        reporter: PrometheusMetricReporter,
-        options: PushgatewayReporterOptions,
-        interval: number &#x3D; 15,
-        unit: TimeUnit &#x3D; SECOND,
-        logger: Logger &#x3D; null,
-        scheduler: Scheduler &#x3D; setInterval) {
-        super();
-
-        this.interval &#x3D; interval;
-        this.unit &#x3D; unit;
-        this.reporter &#x3D; reporter;
-        this.options &#x3D; options;
-        this.logger &#x3D; logger;
-        this.scheduler &#x3D; scheduler;
+    public constructor({
+        clock &#x3D; new StdClock(),
+        host &#x3D; &quot;&quot;,
+        instance &#x3D; &quot;&quot;,
+        job &#x3D; &quot;&quot;,
+        log &#x3D; console,
+        minReportingTimeout &#x3D; 1,
+        port &#x3D; 9091,
+        reporter,
+        reportInterval &#x3D; 1000,
+        scheduler &#x3D; setInterval,
+        tags &#x3D; new Map(),
+        unit &#x3D; MILLISECOND,
+    }: PushgatewayReporterOptions) {
+        super({
+            clock,
+            host,
+            instance,
+            job,
+            log,
+            minReportingTimeout,
+            port,
+            reportInterval,
+            reporter,
+            scheduler,
+            tags,
+            unit,
+        });
     }
 
     /**
-     * Uses the scheduler function to call the {@link PushgatewayMetricReporter#report} function
-     * in the interval specified. The interval is converted into {@link MILLISECOND}s.
-     *
-     * @memberof PushgatewayMetricReporter
-     */
-    public start(): void {
-        const interval: number &#x3D; this.unit.convertTo(this.interval, MILLISECOND);
-        this.timer &#x3D; this.scheduler(() &#x3D;&gt; this.report(), interval);
-    }
-
-    /**
-     * Stops the scheduled reporting.
-     *
-     * @memberof PushgatewayMetricReporter
-     */
-    public stop(): void {
-        if (this.timer) {
-            this.timer.unref();
-        }
-    }
-
-    /**
-     * Calls the reporter t generate the metrics in a valid prometheus text format.
+     * Calls the {@link PrometheusMetricReporter} to generate the metrics in a valid prometheus text format.
      * Sends the metrics via &#x27;PUT&#x27; to the configured pushgateway.
      *
-     * @private
-     * @returns {string}
+     * @protected
      * @memberof PushgatewayMetricReporter
      */
-    private report(): string {
-        const payload &#x3D; this.reporter.getMetricsString();
+    protected async report(): Promise&lt;OverallReportContext&gt; {
+        const ctx &#x3D; this.createOverallReportContext();
+        const payload &#x3D; await this.options.reporter.getMetricsString();
         const options &#x3D; {
             headers: {
                 &quot;Content-Length&quot;: payload.length,
@@ -906,14 +944,76 @@ export class PushgatewayMetricReporter extends MetricReporter {
         };
 
         const req &#x3D; http.request(options, (res) &#x3D;&gt; {
-            if (this.logger) {
-                this.logger.debug(&#x60;${res.statusCode} ${res.statusMessage}&#x60;);
+            if (this.options.log) {
+                this.options.log.trace(&#x60;${res.statusCode} ${res.statusMessage}&#x60;);
             }
         });
         req.write(payload);
         req.end();
 
-        return payload;
+        ctx.result &#x3D; payload;
+        return ctx;
+    }
+
+    /**
+     * Not implemented.
+     *
+     * @protected
+     * @memberof PushgatewayMetricReporter
+     */
+    protected async handleResults(
+        ctx: OverallReportContext,
+        registry: MetricRegistry,
+        date: Date,
+        type: MetricType,
+        results: Array&lt;ReportingResult&lt;any, any&gt;&gt;): Promise&lt;any&gt; {
+    }
+
+    /**
+     * Not implemented.
+     *
+     * @protected
+     * @memberof PushgatewayMetricReporter
+     */
+    protected reportCounter(
+        counter: MonotoneCounter | Counter,
+        ctx: MetricSetReportContext&lt;MonotoneCounter | Counter&gt;) {
+    }
+
+    /**
+     * Not implemented.
+     *
+     * @protected
+     * @memberof PushgatewayMetricReporter
+     */
+    protected reportGauge(gauge: Gauge&lt;any&gt;, ctx: MetricSetReportContext&lt;Gauge&lt;any&gt;&gt;) {
+    }
+
+    /**
+     * Not implemented.
+     *
+     * @protected
+     * @memberof PushgatewayMetricReporter
+     */
+    protected reportHistogram(histogram: Histogram, ctx: MetricSetReportContext&lt;Histogram&gt;) {
+    }
+
+    /**
+     * Not implemented.
+     *
+     * @protected
+     * @memberof PushgatewayMetricReporter
+     */
+    protected reportMeter(meter: Meter, ctx: MetricSetReportContext&lt;Meter&gt;) {
+    }
+
+    /**
+     * Not implemented.
+     *
+     * @protected
+     * @memberof PushgatewayMetricReporter
+     */
+    protected reportTimer(timer: Timer, ctx: MetricSetReportContext&lt;Timer&gt;) {
     }
 
 }
@@ -949,7 +1049,9 @@ export class PushgatewayMetricReporter extends MetricReporter {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <script src="../js/menu-wc.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

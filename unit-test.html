@@ -18,10 +18,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -74,45 +71,45 @@
         <tr>
             <td>
                 <!-- miscellaneous -->
-                        <a href="./interfaces/MetricEntry.html">/mnt/c/git/inspector-prometheus/lib/metrics/PrometheusMetricReporter.ts</a>
-            </td>
-            <td align="right" data-sort="93"  class="very-good">
-                <span class="coverage-percent">93 %</span>
-                <span class="coverage-count">(148/160)</span>
-            </td>
-            <td align="right" data-sort="85"  class="very-good">
-                <span class="coverage-percent">85 %</span>
-                <span class="coverage-count">(71/84)</span>
+                        <a href="./interfaces/PrometheusReporterOptions.html">/mnt/c/git/inspector-prometheus/lib/metrics/PrometheusMetricReporter.ts</a>
             </td>
             <td align="right" data-sort="92"  class="very-good">
                 <span class="coverage-percent">92 %</span>
-                <span class="coverage-count">(57/62)</span>
+                <span class="coverage-count">(102/111)</span>
+            </td>
+            <td align="right" data-sort="86"  class="very-good">
+                <span class="coverage-percent">86 %</span>
+                <span class="coverage-count">(66/77)</span>
+            </td>
+            <td align="right" data-sort="90"  class="very-good">
+                <span class="coverage-percent">90 %</span>
+                <span class="coverage-count">(27/30)</span>
             </td>
             <td align="right" data-sort="92"  class="very-good">
                 <span class="coverage-percent">92 %</span>
-                <span class="coverage-count">(147/159)</span>
+                <span class="coverage-count">(101/110)</span>
             </td>
         </tr>
         <tr>
             <td>
                 <!-- miscellaneous -->
-                        <a href="./classes/PushgatewayReporterOptions.html">/mnt/c/git/inspector-prometheus/lib/metrics/PushgatewayMetricReporter.ts</a>
+                        <a href="./interfaces/PushgatewayReporterOptions.html">/mnt/c/git/inspector-prometheus/lib/metrics/PushgatewayMetricReporter.ts</a>
             </td>
-            <td align="right" data-sort="93"  class="very-good">
-                <span class="coverage-percent">93 %</span>
-                <span class="coverage-count">(27/29)</span>
+            <td align="right" data-sort="100"  class="very-good">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(15/15)</span>
             </td>
-            <td align="right" data-sort="8"  class="low">
-                <span class="coverage-percent">8 %</span>
-                <span class="coverage-count">(1/12)</span>
+            <td align="right" data-sort="54"  class="good">
+                <span class="coverage-percent">54 %</span>
+                <span class="coverage-count">(7/13)</span>
             </td>
-            <td align="right" data-sort="86"  class="very-good">
-                <span class="coverage-percent">86 %</span>
-                <span class="coverage-count">(6/7)</span>
+            <td align="right" data-sort="33"  class="medium">
+                <span class="coverage-percent">33 %</span>
+                <span class="coverage-count">(3/9)</span>
             </td>
-            <td align="right" data-sort="93"  class="very-good">
-                <span class="coverage-percent">93 %</span>
-                <span class="coverage-count">(26/28)</span>
+            <td align="right" data-sort="100"  class="very-good">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(15/15)</span>
             </td>
         </tr>
     </tbody>
@@ -146,7 +143,9 @@
 
        <script src="./js/libs/custom-elements.min.js"></script>
        <script src="./js/libs/lit-html.js"></script>
-       <script src="./js/menu-wc.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
 
        <script src="./js/libs/bootstrap-native.js"></script>
 

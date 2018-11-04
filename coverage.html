@@ -18,10 +18,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -93,41 +90,57 @@
             <td>
                 PrometheusMetricReporter
             </td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(39/39)</span>
+            <td align="right" data-sort="80">
+                <span class="coverage-percent">80 %</span>
+                <span class="coverage-count">(24/30)</span>
             </td>
         </tr>
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./classes/PrometheusReporterOptions.html">lib/metrics/PrometheusMetricReporter.ts</a>
+                <a href="./interfaces/PrometheusFields.html">lib/metrics/PrometheusMetricReporter.ts</a>
             </td>
             <td>
-                class
+                interface
+            </td>
+            <td>
+                PrometheusFields
+            </td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./interfaces/PrometheusMetricResult.html">lib/metrics/PrometheusMetricReporter.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                PrometheusMetricResult
+            </td>
+            <td align="right" data-sort="25">
+                <span class="coverage-percent">25 %</span>
+                <span class="coverage-count">(1/4)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./interfaces/PrometheusReporterOptions.html">lib/metrics/PrometheusMetricReporter.ts</a>
+            </td>
+            <td>
+                interface
             </td>
             <td>
                 PrometheusReporterOptions
             </td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(5/5)</span>
-            </td>
-        </tr>
-        <tr class="very-good">
-            <td>
-                <!-- miscellaneous -->
-                <a href="./interfaces/MetricEntry.html">lib/metrics/PrometheusMetricReporter.ts</a>
-            </td>
-            <td>
-                interface
-            </td>
-            <td>
-                MetricEntry
-            </td>
-            <td align="right" data-sort="100">
-                <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(3/3)</span>
+                <span class="coverage-count">(4/4)</span>
             </td>
         </tr>
         <tr class="very-good">
@@ -143,23 +156,23 @@
             </td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(12/12)</span>
+                <span class="coverage-count">(9/9)</span>
             </td>
         </tr>
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./classes/PushgatewayReporterOptions.html">lib/metrics/PushgatewayMetricReporter.ts</a>
+                <a href="./interfaces/PushgatewayReporterOptions.html">lib/metrics/PushgatewayMetricReporter.ts</a>
             </td>
             <td>
-                class
+                interface
             </td>
             <td>
                 PushgatewayReporterOptions
             </td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(6/6)</span>
+                <span class="coverage-count">(7/7)</span>
             </td>
         </tr>
     </tbody>
@@ -193,7 +206,9 @@
 
        <script src="./js/libs/custom-elements.min.js"></script>
        <script src="./js/libs/lit-html.js"></script>
-       <script src="./js/menu-wc.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
 
        <script src="./js/libs/bootstrap-native.js"></script>
 
