@@ -376,6 +376,7 @@
 import * as http from &quot;http&quot;;
 import {
     Counter,
+    Event,
     Gauge,
     Histogram,
     Logger,
@@ -493,6 +494,31 @@ export class PushgatewayMetricReporter extends ScheduledMetricReporter&lt;Pushga
     }
 
     /**
+     * Uses {@link PrometheusMetricReporter#getEventString} to build the string and sends the event
+     * straight to the pushgateway.
+     *
+     * @param {Event} event
+     * @returns {Promise&lt;Event&gt;} always the specified event.
+     * @memberof PushgatewayMetricReporter
+     */
+    public async reportEvent&lt;TEventData, TEvent extends Event&lt;TEventData&gt;&gt;(event: TEvent): Promise&lt;TEvent&gt; {
+        const payload &#x3D; await this.options.reporter.getEventString(event);
+
+        this.sendPayload(payload);
+
+        return event;
+    }
+
+    /**
+     * Does nothing.
+     *
+     * @returns {Promise&lt;void&gt;}
+     * @memberof PushgatewayMetricReporter
+     */
+    public async flushEvents(): Promise&lt;void&gt; {
+    }
+
+    /**
      * Calls the {@link PrometheusMetricReporter} to generate the metrics in a valid prometheus text format.
      * Sends the metrics via &#x27;PUT&#x27; to the configured pushgateway.
      *
@@ -502,6 +528,21 @@ export class PushgatewayMetricReporter extends ScheduledMetricReporter&lt;Pushga
     protected async report(): Promise&lt;OverallReportContext&gt; {
         const ctx &#x3D; this.createOverallReportContext();
         const payload &#x3D; await this.options.reporter.getMetricsString();
+
+        this.sendPayload(payload);
+
+        ctx.result &#x3D; payload;
+        return ctx;
+    }
+
+    /**
+     * Sends the specified payload to the prometheus pushgateway.
+     *
+     * @protected
+     * @param {string} payload
+     * @memberof PushgatewayMetricReporter
+     */
+    protected sendPayload(payload: string) {
         const options &#x3D; {
             headers: {
                 &quot;Content-Length&quot;: payload.length,
@@ -520,9 +561,6 @@ export class PushgatewayMetricReporter extends ScheduledMetricReporter&lt;Pushga
         });
         req.write(payload);
         req.end();
-
-        ctx.result &#x3D; payload;
-        return ctx;
     }
 
     /**

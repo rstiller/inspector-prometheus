@@ -203,6 +203,7 @@ import {
     BucketCounting,
     Buckets,
     Counter,
+    Event,
     Gauge,
     Histogram,
     Meter,
@@ -457,11 +458,57 @@ export class PrometheusMetricReporter extends MetricReporter&lt;PrometheusReport
     }
 
     /**
-     * Does nothing.
+     * Builds the text representation of the event specified.
      *
+     * @param {MetricRegistry} event
+     * @returns {string}
      * @memberof PrometheusMetricReporter
      */
-    public start() {
+    public async getEventString&lt;TEventData, TEvent extends Event&lt;TEventData&gt;&gt;(event: TEvent): Promise&lt;string&gt; {
+        const overallCtx: OverallReportContext &#x3D; {
+            result: &quot;&quot;,
+        };
+
+        const result &#x3D; this.reportGauge(event, {
+            date: null,
+            metrics: [],
+            overallCtx,
+            registry: null,
+            type: &quot;gauge&quot;,
+        });
+
+        await this.handleResults(
+            overallCtx,
+            null,
+            event.getTime(),
+            &quot;gauge&quot;,
+            [{
+                metric: event,
+                result,
+            }],
+        );
+
+        return overallCtx.result;
+    }
+
+    /**
+     * Use {@link #getEventString} instead.
+     *
+     * @param {Event} event
+     * @returns {Promise&lt;Event&gt;} always the specified event.
+     * @memberof PrometheusMetricReporter
+     */
+    public async reportEvent&lt;TEventData, TEvent extends Event&lt;TEventData&gt;&gt;(event: TEvent): Promise&lt;TEvent&gt; {
+        return event;
+    }
+
+    /**
+     * Does nothing.
+     *
+     * @returns {Promise&lt;void&gt;}
+     * @memberof PrometheusMetricReporter
+     */
+    public async flushEvents(): Promise&lt;void&gt; {
     }
 
     /**
@@ -469,7 +516,17 @@ export class PrometheusMetricReporter extends MetricReporter&lt;PrometheusReport
      *
      * @memberof PrometheusMetricReporter
      */
-    public stop() {
+    public start(): this {
+        return this;
+    }
+
+    /**
+     * Does nothing.
+     *
+     * @memberof PrometheusMetricReporter
+     */
+    public stop(): this {
+        return this;
     }
 
     /**

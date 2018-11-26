@@ -161,12 +161,22 @@ This reporter only support the text format of prometheus / open-metrics.</p>
                                 <a href="#buildPrometheusTags">buildPrometheusTags</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#flushEvents">flushEvents</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Private</span>
                                 <a href="#getBuckets">getBuckets</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
                                 <a href="#getDescription">getDescription</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getEventString">getEventString</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
@@ -211,6 +221,11 @@ This reporter only support the text format of prometheus / open-metrics.</p>
                             <li>
                                     <span class="modifier">Protected</span>
                                 <a href="#reportCounter">reportCounter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#reportEvent">reportEvent</a>
                             </li>
                             <li>
                                     <span class="modifier">Protected</span>
@@ -260,7 +275,7 @@ This reporter only support the text format of prometheus / open-metrics.</p>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="221" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:221</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="222" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:222</a></div>
                             </td>
                         </tr>
 
@@ -337,7 +352,7 @@ This reporter only support the text format of prometheus / open-metrics.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="197" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:197</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="198" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:198</a></div>
                             </td>
                         </tr>
 
@@ -383,7 +398,7 @@ This reporter only support the text format of prometheus / open-metrics.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="205" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:205</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="206" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:206</a></div>
                             </td>
                         </tr>
 
@@ -429,7 +444,7 @@ This reporter only support the text format of prometheus / open-metrics.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:213</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="214" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:214</a></div>
                             </td>
                         </tr>
 
@@ -471,7 +486,7 @@ This reporter only support the text format of prometheus / open-metrics.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:138</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="139" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:139</a></div>
                             </td>
                         </tr>
 
@@ -513,7 +528,7 @@ This reporter only support the text format of prometheus / open-metrics.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:146</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:147</a></div>
                             </td>
                         </tr>
 
@@ -555,7 +570,7 @@ This reporter only support the text format of prometheus / open-metrics.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="154" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:154</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:155</a></div>
                             </td>
                         </tr>
 
@@ -597,7 +612,7 @@ This reporter only support the text format of prometheus / open-metrics.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="162" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:162</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:163</a></div>
                             </td>
                         </tr>
 
@@ -643,7 +658,7 @@ This reporter only support the text format of prometheus / open-metrics.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="221" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:221</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="222" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:222</a></div>
                             </td>
                         </tr>
 
@@ -688,7 +703,7 @@ This reporter only support the text format of prometheus / open-metrics.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="282" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:282</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="339" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:339</a></div>
                             </td>
                         </tr>
 
@@ -761,7 +776,7 @@ This reporter only support the text format of prometheus / open-metrics.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="374" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:374</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="431" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:431</a></div>
                             </td>
                         </tr>
 
@@ -826,6 +841,54 @@ This reporter only support the text format of prometheus / open-metrics.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="flushEvents"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
+                            flushEvents
+                            </b>
+                            <a href="#flushEvents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>flushEvents()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="312" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:312</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Does nothing.</p>
+</div>
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="getBuckets"></a>
                         <span class="name">
                             <b>
@@ -846,7 +909,7 @@ This reporter only support the text format of prometheus / open-metrics.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="525" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:525</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="582" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:582</a></div>
                             </td>
                         </tr>
 
@@ -975,7 +1038,7 @@ This reporter only support the text format of prometheus / open-metrics.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="470" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:470</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="527" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:527</a></div>
                             </td>
                         </tr>
 
@@ -1049,6 +1112,89 @@ If no description was specified this function returns &#39;<metric_name> descrip
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="getEventString"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
+                            getEventString
+                            </b>
+                            <a href="#getEventString"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getEventString(event: TEvent)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="268" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:268</a></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col-md-4">
+                                <b>Type parameters :</b>
+                                <ul class="type-parameters">
+                                        <li>TEventData</li>
+                                        <li>TEvent</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Builds the text representation of the event specified.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code>TEvent</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="getMetricName"></a>
                         <span class="name">
                             <b>
@@ -1069,7 +1215,7 @@ If no description was specified this function returns &#39;<metric_name> descrip
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="594" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:594</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="651" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:651</a></div>
                             </td>
                         </tr>
 
@@ -1143,7 +1289,7 @@ If no description was specified this function returns &#39;<metric_name> descrip
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="252" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:252</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="253" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:253</a></div>
                             </td>
                         </tr>
 
@@ -1190,7 +1336,7 @@ If no description was specified this function returns &#39;<metric_name> descrip
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="410" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:410</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="467" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:467</a></div>
                             </td>
                         </tr>
 
@@ -1321,7 +1467,7 @@ specified function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="564" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:564</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="621" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:621</a></div>
                             </td>
                         </tr>
 
@@ -1438,7 +1584,7 @@ specified function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="508" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:508</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="565" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:565</a></div>
                             </td>
                         </tr>
 
@@ -1511,7 +1657,7 @@ specified function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="486" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:486</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="543" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:543</a></div>
                             </td>
                         </tr>
 
@@ -1585,7 +1731,7 @@ specified function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="286" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:286</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="343" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:343</a></div>
                             </td>
                         </tr>
 
@@ -1705,7 +1851,7 @@ specified function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="173" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:173</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="174" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:174</a></div>
                             </td>
                         </tr>
 
@@ -1779,7 +1925,7 @@ specified function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="186" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:186</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="187" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:187</a></div>
                             </td>
                         </tr>
 
@@ -1853,7 +1999,7 @@ specified function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="302" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:302</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="359" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:359</a></div>
                             </td>
                         </tr>
 
@@ -1916,6 +2062,90 @@ specified function.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="reportEvent"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
+                            reportEvent
+                            </b>
+                            <a href="#reportEvent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>reportEvent(event: TEvent)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="302" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:302</a></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col-md-4">
+                                <b>Type parameters :</b>
+                                <ul class="type-parameters">
+                                        <li>TEventData</li>
+                                        <li>TEvent</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Use <a href="#getEventString">#getEventString</a> instead.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code>TEvent</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;TEvent&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>always the specified event.</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="reportGauge"></a>
                         <span class="name">
                             <b>
@@ -1936,7 +2166,7 @@ specified function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="323" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:323</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="380" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:380</a></div>
                             </td>
                         </tr>
 
@@ -2019,7 +2249,7 @@ specified function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="333" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:333</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="390" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:390</a></div>
                             </td>
                         </tr>
 
@@ -2102,7 +2332,7 @@ specified function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="344" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:344</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="401" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:401</a></div>
                             </td>
                         </tr>
 
@@ -2185,7 +2415,7 @@ specified function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="354" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:354</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="411" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:411</a></div>
                             </td>
                         </tr>
 
@@ -2268,7 +2498,7 @@ specified function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="265" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:265</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="320" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:320</a></div>
                             </td>
                         </tr>
 
@@ -2278,10 +2508,6 @@ specified function.</p>
                             <div class="io-description"><p>Does nothing.</p>
 </div>
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
                     </td>
                 </tr>
             </tbody>
@@ -2310,7 +2536,7 @@ specified function.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="273" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:273</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="329" class="link-to-prism">lib/metrics/PrometheusMetricReporter.ts:329</a></div>
                             </td>
                         </tr>
 
@@ -2320,10 +2546,6 @@ specified function.</p>
                             <div class="io-description"><p>Does nothing.</p>
 </div>
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
                     </td>
                 </tr>
             </tbody>
@@ -2345,6 +2567,7 @@ import {
     BucketCounting,
     Buckets,
     Counter,
+    Event,
     Gauge,
     Histogram,
     Meter,
@@ -2599,11 +2822,57 @@ export class PrometheusMetricReporter extends MetricReporter&lt;PrometheusReport
     }
 
     /**
-     * Does nothing.
+     * Builds the text representation of the event specified.
      *
+     * @param {MetricRegistry} event
+     * @returns {string}
      * @memberof PrometheusMetricReporter
      */
-    public start() {
+    public async getEventString&lt;TEventData, TEvent extends Event&lt;TEventData&gt;&gt;(event: TEvent): Promise&lt;string&gt; {
+        const overallCtx: OverallReportContext &#x3D; {
+            result: &quot;&quot;,
+        };
+
+        const result &#x3D; this.reportGauge(event, {
+            date: null,
+            metrics: [],
+            overallCtx,
+            registry: null,
+            type: &quot;gauge&quot;,
+        });
+
+        await this.handleResults(
+            overallCtx,
+            null,
+            event.getTime(),
+            &quot;gauge&quot;,
+            [{
+                metric: event,
+                result,
+            }],
+        );
+
+        return overallCtx.result;
+    }
+
+    /**
+     * Use {@link #getEventString} instead.
+     *
+     * @param {Event} event
+     * @returns {Promise&lt;Event&gt;} always the specified event.
+     * @memberof PrometheusMetricReporter
+     */
+    public async reportEvent&lt;TEventData, TEvent extends Event&lt;TEventData&gt;&gt;(event: TEvent): Promise&lt;TEvent&gt; {
+        return event;
+    }
+
+    /**
+     * Does nothing.
+     *
+     * @returns {Promise&lt;void&gt;}
+     * @memberof PrometheusMetricReporter
+     */
+    public async flushEvents(): Promise&lt;void&gt; {
     }
 
     /**
@@ -2611,7 +2880,17 @@ export class PrometheusMetricReporter extends MetricReporter&lt;PrometheusReport
      *
      * @memberof PrometheusMetricReporter
      */
-    public stop() {
+    public start(): this {
+        return this;
+    }
+
+    /**
+     * Does nothing.
+     *
+     * @memberof PrometheusMetricReporter
+     */
+    public stop(): this {
+        return this;
     }
 
     /**

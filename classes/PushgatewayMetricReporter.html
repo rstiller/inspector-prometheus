@@ -101,6 +101,11 @@ to the configurated pushgateway using the text format.</p>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#flushEvents">flushEvents</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Protected</span>
                                     <span class="modifier">Async</span>
                                 <a href="#handleResults">handleResults</a>
@@ -113,6 +118,11 @@ to the configurated pushgateway using the text format.</p>
                             <li>
                                     <span class="modifier">Protected</span>
                                 <a href="#reportCounter">reportCounter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#reportEvent">reportEvent</a>
                             </li>
                             <li>
                                     <span class="modifier">Protected</span>
@@ -129,6 +139,10 @@ to the configurated pushgateway using the text format.</p>
                             <li>
                                     <span class="modifier">Protected</span>
                                 <a href="#reportTimer">reportTimer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#sendPayload">sendPayload</a>
                             </li>
                         </ul>
                     </td>
@@ -154,7 +168,7 @@ to the configurated pushgateway using the text format.</p>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:85</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:86</a></div>
                             </td>
                         </tr>
 
@@ -203,6 +217,54 @@ to the configurated pushgateway using the text format.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="flushEvents"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
+                            flushEvents
+                            </b>
+                            <a href="#flushEvents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>flushEvents()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:145</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Does nothing.</p>
+</div>
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="handleResults"></a>
                         <span class="name">
                             <b>
@@ -224,7 +286,7 @@ to the configurated pushgateway using the text format.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="161" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:161</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="199" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:199</a></div>
                             </td>
                         </tr>
 
@@ -346,7 +408,7 @@ to the configurated pushgateway using the text format.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:129</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:155</a></div>
                             </td>
                         </tr>
 
@@ -389,7 +451,7 @@ Sends the metrics via &#39;PUT&#39; to the configured pushgateway.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="175" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:175</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:213</a></div>
                             </td>
                         </tr>
 
@@ -454,6 +516,91 @@ Sends the metrics via &#39;PUT&#39; to the configured pushgateway.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="reportEvent"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
+                            reportEvent
+                            </b>
+                            <a href="#reportEvent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>reportEvent(event: TEvent)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:131</a></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col-md-4">
+                                <b>Type parameters :</b>
+                                <ul class="type-parameters">
+                                        <li>TEventData</li>
+                                        <li>TEvent</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Uses <a href="../classes/PrometheusMetricReporter.html#getEventString">PrometheusMetricReporter</a> to build the string and sends the event
+straight to the pushgateway.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code>TEvent</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;TEvent&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    <p>always the specified event.</p>
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="reportGauge"></a>
                         <span class="name">
                             <b>
@@ -474,7 +621,7 @@ Sends the metrics via &#39;PUT&#39; to the configured pushgateway.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="186" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:186</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="224" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:224</a></div>
                             </td>
                         </tr>
 
@@ -559,7 +706,7 @@ Sends the metrics via &#39;PUT&#39; to the configured pushgateway.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:195</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="233" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:233</a></div>
                             </td>
                         </tr>
 
@@ -644,7 +791,7 @@ Sends the metrics via &#39;PUT&#39; to the configured pushgateway.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="204" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:204</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="242" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:242</a></div>
                             </td>
                         </tr>
 
@@ -729,7 +876,7 @@ Sends the metrics via &#39;PUT&#39; to the configured pushgateway.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:213</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="251" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:251</a></div>
                             </td>
                         </tr>
 
@@ -790,6 +937,79 @@ Sends the metrics via &#39;PUT&#39; to the configured pushgateway.</p>
                 </tr>
             </tbody>
         </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sendPayload"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            sendPayload
+                            </b>
+                            <a href="#sendPayload"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>sendPayload(payload: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="172" class="link-to-prism">lib/metrics/PushgatewayMetricReporter.ts:172</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Sends the specified payload to the prometheus pushgateway.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>payload</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 </section>
 
 
@@ -806,6 +1026,7 @@ Sends the metrics via &#39;PUT&#39; to the configured pushgateway.</p>
 import * as http from &quot;http&quot;;
 import {
     Counter,
+    Event,
     Gauge,
     Histogram,
     Logger,
@@ -923,6 +1144,31 @@ export class PushgatewayMetricReporter extends ScheduledMetricReporter&lt;Pushga
     }
 
     /**
+     * Uses {@link PrometheusMetricReporter#getEventString} to build the string and sends the event
+     * straight to the pushgateway.
+     *
+     * @param {Event} event
+     * @returns {Promise&lt;Event&gt;} always the specified event.
+     * @memberof PushgatewayMetricReporter
+     */
+    public async reportEvent&lt;TEventData, TEvent extends Event&lt;TEventData&gt;&gt;(event: TEvent): Promise&lt;TEvent&gt; {
+        const payload &#x3D; await this.options.reporter.getEventString(event);
+
+        this.sendPayload(payload);
+
+        return event;
+    }
+
+    /**
+     * Does nothing.
+     *
+     * @returns {Promise&lt;void&gt;}
+     * @memberof PushgatewayMetricReporter
+     */
+    public async flushEvents(): Promise&lt;void&gt; {
+    }
+
+    /**
      * Calls the {@link PrometheusMetricReporter} to generate the metrics in a valid prometheus text format.
      * Sends the metrics via &#x27;PUT&#x27; to the configured pushgateway.
      *
@@ -932,6 +1178,21 @@ export class PushgatewayMetricReporter extends ScheduledMetricReporter&lt;Pushga
     protected async report(): Promise&lt;OverallReportContext&gt; {
         const ctx &#x3D; this.createOverallReportContext();
         const payload &#x3D; await this.options.reporter.getMetricsString();
+
+        this.sendPayload(payload);
+
+        ctx.result &#x3D; payload;
+        return ctx;
+    }
+
+    /**
+     * Sends the specified payload to the prometheus pushgateway.
+     *
+     * @protected
+     * @param {string} payload
+     * @memberof PushgatewayMetricReporter
+     */
+    protected sendPayload(payload: string) {
         const options &#x3D; {
             headers: {
                 &quot;Content-Length&quot;: payload.length,
@@ -950,9 +1211,6 @@ export class PushgatewayMetricReporter extends ScheduledMetricReporter&lt;Pushga
         });
         req.write(payload);
         req.end();
-
-        ctx.result &#x3D; payload;
-        return ctx;
     }
 
     /**

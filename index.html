@@ -157,6 +157,15 @@ const pushReporter = new PushgatewayMetricReporter({
 
 // start reporting
 pushReporter.start();</code></pre></div><h2 id="local-dev">local dev</h2>
+<h3 id="setup-playground">setup playground</h3>
+<p>Have a look at <code>playground/playground.ts</code> to see what is reported to the prometheus server.<br>To let it run in a fully provisioned environment do the following:  </p>
+<ol>
+<li>execute <code>npm i</code></li>
+<li>execute <code>test-env/boot.sh</code> - builds the docker images and starts the services</li>
+<li>start the playground app by executing <code>./playground.sh</code></li>
+<li>navigate to <code>localhost:3000</code> in the browser</li>
+<li>click on dashboard <code>Playground Dashboard</code> and see the reporter work</li>
+</ol>
 <h3 id="compile-test-with-different-nodejs-versions">compile &amp; test with different nodejs versions</h3>
 <p>build docker images:  </p>
 <div><pre class="line-numbers"><code class="language-bash">docker-compose build</code></pre></div><p>run tests:  </p>
