@@ -417,7 +417,7 @@ export class PrometheusMetricReporter extends MetricReporter&lt;PrometheusReport
      *
      * @memberof PrometheusMetricReporter
      */
-    public start(): this {
+    public async start(): Promise&lt;this&gt; {
         return this;
     }
 
@@ -426,7 +426,7 @@ export class PrometheusMetricReporter extends MetricReporter&lt;PrometheusReport
      *
      * @memberof PrometheusMetricReporter
      */
-    public stop(): this {
+    public async stop(): Promise&lt;this&gt; {
         return this;
     }
 

@@ -245,10 +245,12 @@ This reporter only support the text format of prometheus / open-metrics.</p>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
                                 <a href="#start">start</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
                                 <a href="#stop">stop</a>
                             </li>
                         </ul>
@@ -2482,6 +2484,7 @@ specified function.</p>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
                             start
                             </b>
                             <a href="#start"><span class="icon ion-ios-link"></span></a>
@@ -2508,6 +2511,10 @@ specified function.</p>
                             <div class="io-description"><p>Does nothing.</p>
 </div>
 
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;&gt;</code>
+
+                            </div>
                     </td>
                 </tr>
             </tbody>
@@ -2520,6 +2527,7 @@ specified function.</p>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
                             stop
                             </b>
                             <a href="#stop"><span class="icon ion-ios-link"></span></a>
@@ -2546,6 +2554,10 @@ specified function.</p>
                             <div class="io-description"><p>Does nothing.</p>
 </div>
 
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;&gt;</code>
+
+                            </div>
                     </td>
                 </tr>
             </tbody>
@@ -2880,7 +2892,7 @@ export class PrometheusMetricReporter extends MetricReporter&lt;PrometheusReport
      *
      * @memberof PrometheusMetricReporter
      */
-    public start(): this {
+    public async start(): Promise&lt;this&gt; {
         return this;
     }
 
@@ -2889,7 +2901,7 @@ export class PrometheusMetricReporter extends MetricReporter&lt;PrometheusReport
      *
      * @memberof PrometheusMetricReporter
      */
-    public stop(): this {
+    public async stop(): Promise&lt;this&gt; {
         return this;
     }
 
